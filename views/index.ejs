@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <title>Document</title>
+    <style>
+        .container-fluid {
+            padding: 20px 30px;
+        }
+
+        .heading {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <h2 class="pink-text center heading" style="margin-bottom: 50px;">CRUD | Ajax | NodeJS</h2>
+        <div class="row">
+            <div class="col m4 s12">
+                <form id="crud-form" style="margin-bottom: 30px;">
+                    <div class="input-field">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="email" type="text" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input id="contact" type="text" class="validate">
+                        <label for="contact">Contact</label>
+                    </div>
+                    <button type="submit" id="submit-crud" class="btn btn-large green waves-effect waves-light">Add
+                        Data</button>
+                </form>
+            </div>
+            <div class="col m8 s12">
+                <table class="responsive-table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Delete</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody id="show-data">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Update Record</h4>
+                <form id="update-form" style="margin-bottom: 30px;">
+                    <input placeholder="Update ID" id="id" type="text" class="validate">
+                    <div class="input-field">
+                        <input placeholder="First Name" id="ufirst_name" type="text" class="validate">
+                        <label for="ufirst_name">First Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Last Name" id="ulast_name" type="text" class="validate">
+                        <label for="ulast_name">Last Name</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Email" id="uemail" type="text" class="validate">
+                        <label for="uemail">Email</label>
+                    </div>
+                    <div class="input-field">
+                        <input placeholder="Contact" id="ucontact" type="text" class="validate">
+                        <label for="ucontact">Contact</label>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-close waves-effect waves-green btn-flat" id="update-btn">Update
+                    User</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/materialize.min.js"></script>
+    <script src="/js/app.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.modal').modal();
+        });
+    </script>
+</body>
+
+</html>
